@@ -16,7 +16,6 @@
 		27594C3D1AE08FBB0085E5A5 /* CursorTextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27594C3A1AE08FBB0085E5A5 /* CursorTextField.cpp */; };
 		275EE4B81ADB41270053B773 /* TheScene_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 275EE4B61ADB41270053B773 /* TheScene_1.cpp */; };
 		275EE4B91ADB41270053B773 /* TheScene_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 275EE4B61ADB41270053B773 /* TheScene_1.cpp */; };
-		27630AAC1AD90F47009E8F8F /* MainScene.cpp in Resources */ = {isa = PBXBuildFile; fileRef = 27630AAB1AD90F47009E8F8F /* MainScene.cpp */; };
 		27630AB01AD9119E009E8F8F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27630AAF1AD9119E009E8F8F /* background.png */; };
 		278D31CB1AD93956001A357F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27630AAB1AD90F47009E8F8F /* MainScene.cpp */; };
 		27935E4F1AE0A83700E64251 /* input_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27935E4E1AE0A83700E64251 /* input_1.png */; };
@@ -76,6 +75,7 @@
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		DA69C2951AE7CE3F0076EED6 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27630AAB1AD90F47009E8F8F /* MainScene.cpp */; };
+		DA69C2961AE7D0290076EED6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27630AAF1AD9119E009E8F8F /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1247,6 +1247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA69C2961AE7D0290076EED6 /* background.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -1268,7 +1269,6 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				27630AAC1AD90F47009E8F8F /* MainScene.cpp in Resources */,
 				27935E4F1AE0A83700E64251 /* input_1.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
