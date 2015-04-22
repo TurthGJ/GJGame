@@ -2,8 +2,11 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "TheScene_1.h"
+#include "TheSingleScene_1.h"
+#include "JsonImage.h"
 
-class HelloWorld : public cocos2d::Layer
+class MainScene : public cocos2d::Layer
 {
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -16,7 +19,13 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(MainScene);
+    
+    TheScene_1* thescene_1;
+    
+    JsonImage* image;
+    void onHttpRequestCompleted(HttpClient *sender, HttpResponse *response);
+
 };
 
 #endif // __HELLOWORLD_SCENE_H__
