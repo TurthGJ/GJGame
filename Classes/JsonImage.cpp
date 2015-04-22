@@ -6,6 +6,7 @@
 //
 //
 
+#include <iostream>
 #include "JsonImage.h"
 #include "cocos2d.h"
 #include "network/HttpClient.h"
@@ -17,6 +18,15 @@ using namespace cocos2d :: network;
 USING_NS_CC;
 using namespace std;
 
+string stringFrom(std::vector<char> * pVector) {
+    std::stringstream oss;
+    for(unsigned int i=0;i < pVector->size();i++) {
+        oss<<(*pVector)[i];
+    }
+    string returnString =oss.str();
+    return returnString;
+}
+
 JsonImage :: JsonImage()
 {
     
@@ -27,22 +37,14 @@ JsonImage :: ~JsonImage()
     
 }
 
-
 void JsonImage::httpconnect(const char* p)
 {
     HttpRequest* request = new HttpRequest();
     HttpClient* httpClient = HttpClient::getInstance();
-    request->setUrl("http://192.168.1.109:80/apigraph?_method=get_result");
-    request->setRequestType(HttpRequest::Type::POST);
+    request->setUrl("http://img3.douban.com/lpic/s11150673.jpg");
+    request->setRequestType(HttpRequest::Type::GET);
     
-    std::vector<std::string> headers;
-    headers.push_back("'X-yunson':'baisong.com'");
-    request->setHeaders(headers);
-    
-    const char* postData = p;
-    request->setRequestData(postData ,strlen(postData));
     request->setResponseCallback(CC_CALLBACK_2(JsonImage::onHttpRequestCompleted,this));
-    request->setTag("Test");
     httpClient->setTimeoutForConnect(5);
     HttpClient::getInstance()->send(request);
     
@@ -63,55 +65,30 @@ void JsonImage::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, coc
         
     }
     
-    std::vector<char>* buffer = response->getResponseData();
-    std :: string info = "";
-    info = string(buffer->begin(),buffer->end());
+    std::vector<char>* responseData = response->getResponseData();
     
-    rapidjson::Document str;
-    str.Parse<0>(info.c_str());
-    if(str.HasParseError())
-        CCLOG("GetParseError %s\n",str.GetParseError());
-    rapidjson::Value& arraydata = str["data"];
-//    CCLOG("%s\n", arraydata["graph"].GetString());
+    string tmpString = stringFrom(responseData);
+    const char * buffer=tmpString.c_str();
+
+    char * encode_base64_image_buffer = NULL;
+    int encode_base64_image_buffer_length = base64Encode((const unsigned char *) buffer,
+                                                  (unsigned int) responseData->size(),
+                                                  &encode_base64_image_buffer);
+    std::cout << "encode_base64_image_buffer_length:" << encode_base64_image_buffer_length << endl;
     
-    std::string load_str;
+    unsigned char * decode_base64_image_buffer = NULL;
+    int decode_base64_image_buffer_length = base64Decode((const unsigned char *) encode_base64_image_buffer,
+                                                         (unsigned int) encode_base64_image_buffer_length,
+                                                         &decode_base64_image_buffer);
+    std::cout << "decode_base64_image_buffer_length:" << decode_base64_image_buffer_length << endl;
     
-    load_str =  arraydata["graph"].GetString();
-    
-    int len = 0;
-    unsigned char *buffer_image = NULL;
-    len = base64Decode((unsigned char*)load_str.c_str(), (unsigned int)load_str.length(), &buffer_image);
-    
-    CCLOG("%s\n",buffer_image);
-    
-    
-//    ofstream f1;
-//    f1.open("/Users/GJ/Downloads/a.png",ofstream::out);
-//    f1<<buffer_image;
-    
-    if(buffer_image)
-    {
-        unsigned char *pImageData = new unsigned char(len);
-        memcpy(pImageData,buffer_image,len);
-        ok = img->initWithImageData(pImageData, len);
-        image_base64->initWithImage(img);
+    if (decode_base64_image_buffer_length > 0) {
+        Image* img = new Image();
+        bool ok = img->initWithImageData(decode_base64_image_buffer, decode_base64_image_buffer_length);
+        std::cout<< "decode image result:" << ok << endl;
+    }else {
+        std::cout<< "decode image failed" << endl;
     }
-
-//    if(load_str.c_str() != NULL)
-//    {
-//        image_str = new char[100];
-//    }
-//    stpcpy(image_str, load_str.c_str());
     
-//    Image* img = new Image();
-//    bool ok = img->initWithImageData(buffer_image, len);
-//    if(ok)
-//        image_base64->initWithImage(img);
-
-//    printf("Http Test, dump data: ");
-//    for (unsigned int i = 0 ; i < len;i++) {
-//        printf("%c",*(buffer_image+i));
-//        i++;
-//    }
-//    printf("\n");
 }
+
