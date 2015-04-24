@@ -34,10 +34,11 @@ TheSingleScene_1_1::~TheSingleScene_1_1()
 Scene* TheSingleScene_1_1::createScene_1()
 {
     _image = new JsonImage();
+    
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     Size visibleSize = Director :: getInstance()->getVisibleSize();
     auto scene = Scene :: create();
-    auto layer = LayerColor :: create(Color4B(0x48,0x3D,0x8B,0x80));
+    auto layer = LayerColor :: create(Color4B(0x3F,0x28,0x60,0x80));
     scene->addChild(layer);
     
     auto label = Label::createWithSystemFont("功率信号的频谱特性", "fonts/Marker Felt.ttf", 24);
@@ -154,10 +155,10 @@ void TheSingleScene_1_1::checkimage(float dt)
 {
     if(_image)
     {
-        CCLOG("%d\n",_image == NULL);
+        CCLOG("%d\n",_image->plen);
     }
 
-//    if(_image->plen > 100)
+//    if(_image->plen > 0)
 //    {
 //        Size visiblesize = Director :: getInstance()->getVisibleSize();
 //        sprite = Sprite :: createWithTexture(_image->image_base64);
