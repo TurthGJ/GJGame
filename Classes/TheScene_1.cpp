@@ -19,7 +19,7 @@ using namespace cocos2d::ui;
 
 void TheScene_1::menubutton_1(Ref *pSender)
 {
-    TheSingleScene_1* thescene_1 = new TheSingleScene_1();
+    thescene_1 = new TheSingleScene_1();
     if(thescene_1->createScene_1() != NULL)
     {
         auto scene_1 = TransitionCrossFade :: create(1.0f,thescene_1->createScene_1());
@@ -131,6 +131,10 @@ Scene* TheScene_1 :: createScene()
     button_8->setTitleFontSize(20);
     button_8->addTouchEventListener(CC_CALLBACK_1(TheScene_1::menubutton_8,this));
     layer->addChild(button_8,1);
-
     return scene;
+}
+
+void TheScene_1::updata(float dt)
+{
+    CCLOG("HELLO");
 }

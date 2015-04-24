@@ -30,7 +30,9 @@ public:
     void menubutton_7(Ref* pSender);
     void menubutton_8(Ref* pSender);
     JsonImage* image;
+    TheSingleScene_1* thescene_1;
     
+    void updata(float dt);
 };
 
 #endif /* defined(__GJGame__TheScene_1__) */

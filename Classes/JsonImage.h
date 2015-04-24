@@ -25,8 +25,7 @@ public:
     void httpconnect(const char* p);
     void onHttpRequestCompleted(HttpClient *sender, HttpResponse *response);
     Texture2D* image_base64;
-    Image* img;
-    bool ok;
+    int plen;
 };
 
 #endif /* defined(__GJGame__JsonImage__) */

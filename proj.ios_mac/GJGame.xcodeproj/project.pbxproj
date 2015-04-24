@@ -35,6 +35,8 @@
 		27F512911AE4F67100771AF7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		27F512921AE4F67A00771AF7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087E78A17EB975400C73F5D /* OpenGL.framework */; };
 		27F512931AE4F68500771AF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F50F711AE4EA5C00771AF7 /* Cocoa.framework */; };
+		27F512961AE9E30000771AF7 /* TheSingleScene_1_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27F512941AE9E30000771AF7 /* TheSingleScene_1_1.cpp */; };
+		27F512971AE9E30000771AF7 /* TheSingleScene_1_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27F512941AE9E30000771AF7 /* TheSingleScene_1_1.cpp */; };
 		27F5A8CE1ADD53B2000B59DB /* JsonImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27F5A8CC1ADD53B2000B59DB /* JsonImage.cpp */; };
 		27F5A8CF1ADD53B2000B59DB /* JsonImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27F5A8CC1ADD53B2000B59DB /* JsonImage.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -513,6 +515,8 @@
 		27F511651AE4ECB000771AF7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		27F511661AE4ECB000771AF7 /* vmnet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vmnet.framework; path = System/Library/Frameworks/vmnet.framework; sourceTree = SDKROOT; };
 		27F511671AE4ECB000771AF7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		27F512941AE9E30000771AF7 /* TheSingleScene_1_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheSingleScene_1_1.cpp; sourceTree = "<group>"; };
+		27F512951AE9E30000771AF7 /* TheSingleScene_1_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSingleScene_1_1.h; sourceTree = "<group>"; };
 		27F5A8CC1ADD53B2000B59DB /* JsonImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonImage.cpp; sourceTree = "<group>"; };
 		27F5A8CD1ADD53B2000B59DB /* JsonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonImage.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1094,6 +1098,8 @@
 				27142D2A1ADE2D21007DA61A /* TheSingleScene_1.h */,
 				27594C3A1AE08FBB0085E5A5 /* CursorTextField.cpp */,
 				27594C3B1AE08FBB0085E5A5 /* CursorTextField.h */,
+				27F512941AE9E30000771AF7 /* TheSingleScene_1_1.cpp */,
+				27F512951AE9E30000771AF7 /* TheSingleScene_1_1.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -1295,6 +1301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				275EE4B81ADB41270053B773 /* TheScene_1.cpp in Sources */,
+				27F512961AE9E30000771AF7 /* TheSingleScene_1_1.cpp in Sources */,
 				27F5A8CE1ADD53B2000B59DB /* JsonImage.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				27594C3C1AE08FBB0085E5A5 /* CursorTextField.cpp in Sources */,
@@ -1309,6 +1316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F512971AE9E30000771AF7 /* TheSingleScene_1_1.cpp in Sources */,
 				278D31CB1AD93956001A357F /* MainScene.cpp in Sources */,
 				27594C3D1AE08FBB0085E5A5 /* CursorTextField.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,

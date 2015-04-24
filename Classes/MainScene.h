@@ -21,11 +21,11 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MainScene);
     
-    TheScene_1* thescene_1;
+    TheScene_1* the;
     
     JsonImage* image;
-    void onHttpRequestCompleted(HttpClient *sender, HttpResponse *response);
 
+    void check(float dt);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

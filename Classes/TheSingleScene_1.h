@@ -14,6 +14,7 @@
 #include "JsonImage.h"
 #include "cocostudio/CocoStudio.h"
 #include "UIButton.h"
+#include "TheSingleScene_1_1.h"
 
 
 USING_NS_CC;
@@ -26,23 +27,12 @@ public:
     TheSingleScene_1();
     ~TheSingleScene_1();
     Scene* createScene_1();
-    Scene* createScene_2();
+    
     void menubutton_1(Ref* pSender,ui::Widget::TouchEventType type);
-    void menubutton_2(Ref* pSender);
-    void menubutton_3(Ref* pSender,ui::Widget::TouchEventType type);
+    void menubutton_2(Ref* pSender,ui::Widget::TouchEventType type);
     
-    void checkimage(float dt);
+    TheSingleScene_1_1* thescene_1;
     
-    string p;
-    
-    JsonImage* image;
-    Sprite* sprite;
-    Texture2D* image_base64;
-//    void menubutton_4(Ref* pSender);
-//    void menubutton_5(Ref* pSender);
-//    void menubutton_6(Ref* pSender);
-//    void menubutton_7(Ref* pSender);
-//    void menubutton_8(Ref* pSender);
 };
 
 #endif /* defined(__GJGame__TheSingleScene_1__) */
