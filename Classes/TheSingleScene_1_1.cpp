@@ -33,7 +33,7 @@ TheSingleScene_1_1::~TheSingleScene_1_1()
 
 Scene* TheSingleScene_1_1::createScene_1()
 {
-
+    _image = new JsonImage();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     Size visibleSize = Director :: getInstance()->getVisibleSize();
     auto scene = Scene :: create();
@@ -146,7 +146,6 @@ void TheSingleScene_1_1::menubutton_1(Ref *pSender,ui::Widget::TouchEventType ty
         rapidjson :: Writer<StringBuffer> writer(buffer);
         document.Accept(writer);
         
-        _image = new JsonImage();
         _image->httpconnect(buffer.GetString());
     }
 }
@@ -155,7 +154,7 @@ void TheSingleScene_1_1::checkimage(float dt)
 {
     if(_image)
     {
-        CCLOG("%d\n",_image->plen);
+        CCLOG("%d\n",_image == NULL);
     }
 
 //    if(_image->plen > 100)
