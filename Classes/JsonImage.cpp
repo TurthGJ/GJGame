@@ -26,14 +26,14 @@ JsonImage :: JsonImage()
 
 JsonImage :: ~JsonImage()
 {
-    
+    CC_SAFE_DELETE(image_base64);
 }
 
 void JsonImage::httpconnect(const char* p)
 {
     HttpRequest* request = new HttpRequest();
     HttpClient* httpClient = HttpClient::getInstance();
-    request->setUrl("http://192.168.1.107:80/apigraph?_method=get_result");
+    request->setUrl("http://192.168.1.108:80/apigraph?_method=get_result");
     request->setRequestType(HttpRequest::Type::POST);
     
     std::vector<std::string> headers;
@@ -90,6 +90,7 @@ void JsonImage::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, coc
     if (decode_base64_image_buffer_length > 0) {
         Image* img = new Image();
         bool ok = img->initWithImageData(decode_base64_image_buffer, decode_base64_image_buffer_length);
+        image_base64 = new Texture2D();
         image_base64->initWithImage(img);
         cout<< "decode image result:" << ok << endl;
     }else {

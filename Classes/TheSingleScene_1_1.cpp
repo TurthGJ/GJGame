@@ -28,15 +28,12 @@ TheSingleScene_1_1::TheSingleScene_1_1()
 
 TheSingleScene_1_1::~TheSingleScene_1_1()
 {
-
+    CC_SAFE_DELETE(_image);
 }
 
 Scene* TheSingleScene_1_1::createScene_1()
 {
-    _image = new JsonImage();
-    
-    _image->image_base64 = NULL;
-    
+
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     Size visibleSize = Director :: getInstance()->getVisibleSize();
     auto scene = Scene :: create();
@@ -116,7 +113,8 @@ Scene* TheSingleScene_1_1::createScene_1()
     button_1->addTouchEventListener(CC_CALLBACK_2(TheSingleScene_1_1::menubutton_1,this));
     layer->addChild(button_1,1);
     
-    scene->schedule(schedule_selector(TheSingleScene_1_1::checkimage), 0.2f);
+
+    scene->schedule(schedule_selector(TheSingleScene_1_1::checkimage), 1.0f);
     
     return scene;
 }
@@ -125,6 +123,10 @@ void TheSingleScene_1_1::menubutton_1(Ref *pSender,ui::Widget::TouchEventType ty
 {
     if(type == ui::Widget::TouchEventType::BEGAN)
     {
+        if(_image)
+        {
+            CCLOG("%d\n",_image->plen);
+        }
         rapidjson::Document document;
         document.SetObject();
         rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
@@ -144,14 +146,19 @@ void TheSingleScene_1_1::menubutton_1(Ref *pSender,ui::Widget::TouchEventType ty
         rapidjson :: Writer<StringBuffer> writer(buffer);
         document.Accept(writer);
         
+        _image = new JsonImage();
         _image->httpconnect(buffer.GetString());
     }
 }
 
 void TheSingleScene_1_1::checkimage(float dt)
 {
-    CCLOG("%d\n",_image->image_base64 == NULL);
-//    if(_image->plen > 0)
+    if(_image)
+    {
+        CCLOG("%d\n",_image->plen);
+    }
+
+//    if(_image->plen > 100)
 //    {
 //        Size visiblesize = Director :: getInstance()->getVisibleSize();
 //        sprite = Sprite :: createWithTexture(_image->image_base64);

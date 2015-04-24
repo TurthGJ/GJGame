@@ -17,6 +17,11 @@ USING_NS_CC;
 using namespace std;
 using namespace cocos2d::ui;
 
+TheScene_1::~TheScene_1()
+{
+    CC_SAFE_DELETE(thescene_1);
+}
+
 void TheScene_1::menubutton_1(Ref *pSender)
 {
     thescene_1 = new TheSingleScene_1();
@@ -25,7 +30,6 @@ void TheScene_1::menubutton_1(Ref *pSender)
         auto scene_1 = TransitionCrossFade :: create(1.0f,thescene_1->createScene_1());
         Director :: getInstance()->pushScene(scene_1);
     }
-    delete thescene_1;
 }
 
 void TheScene_1::menubutton_2(Ref *pSender)

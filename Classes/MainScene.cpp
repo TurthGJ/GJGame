@@ -9,6 +9,11 @@ USING_NS_CC;
 using namespace std;
 using namespace cocos2d::ui;
 
+MainScene::~MainScene()
+{
+    CC_SAFE_DELETE(the);
+}
+
 Scene* MainScene::createScene()
 {
     // 'scene' is an autorelease object

@@ -20,6 +20,7 @@ USING_NS_CC;
 class TheScene_1 : public Layer
 {
 public:
+    ~TheScene_1();
     Scene* createScene();
     void menubutton_1(Ref* pSender);
     void menubutton_2(Ref* pSender);
