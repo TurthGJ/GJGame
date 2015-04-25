@@ -17,11 +17,12 @@
 using namespace cocos2d :: network;
 USING_NS_CC;
 
-class JsonImage
+class JsonImage : public Node
 {
 public:
     JsonImage();
     ~JsonImage();
+    static JsonImage* create();
     void httpconnect(const char* p);
     void onHttpRequestCompleted(HttpClient *sender, HttpResponse *response);
     Texture2D* image_base64;

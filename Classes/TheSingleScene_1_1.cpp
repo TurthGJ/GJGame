@@ -28,13 +28,13 @@ TheSingleScene_1_1::TheSingleScene_1_1()
 
 TheSingleScene_1_1::~TheSingleScene_1_1()
 {
-    CC_SAFE_DELETE(_image);
+    CC_SAFE_RELEASE_NULL(_image);
 }
 
 Scene* TheSingleScene_1_1::createScene_1()
 {
-    _image = new JsonImage();
-    
+    _image = JsonImage::create();
+    _image->retain();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     Size visibleSize = Director :: getInstance()->getVisibleSize();
     auto scene = Scene :: create();
@@ -156,7 +156,7 @@ void TheSingleScene_1_1::checkimage(float dt)
 {
 //    if(_image->plen > 0)
 //    {
-    CCLOG("%d\n",_image == NULL);
+        CCLOG("%d\n",_image == NULL);
     
 //    }
 

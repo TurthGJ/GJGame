@@ -112,3 +112,15 @@ void JsonImage::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, coc
 //    }
 //    printf("\n");
 }
+
+JsonImage* JsonImage::create()
+{
+    JsonImage* jsonimage = new JsonImage();
+    if (jsonimage)
+    {
+        jsonimage->autorelease();
+        return jsonimage;
+    }
+    CC_SAFE_DELETE(jsonimage);
+    return NULL;
+}
