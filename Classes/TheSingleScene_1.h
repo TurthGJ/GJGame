@@ -32,7 +32,6 @@ public:
     void menubutton_2(Ref* pSender,ui::Widget::TouchEventType type);
     
     TheSingleScene_1_1* thescene_1;
-    
 };
 
 #endif /* defined(__GJGame__TheSingleScene_1__) */

@@ -17,9 +17,14 @@ USING_NS_CC;
 using namespace std;
 using namespace cocos2d::ui;
 
+TheScene_1::TheScene_1()
+{
+
+}
+
 TheScene_1::~TheScene_1()
 {
-    CC_SAFE_DELETE(thescene_1);
+//    CC_SAFE_DELETE(thescene_1);
 }
 
 void TheScene_1::menubutton_1(Ref *pSender)
@@ -136,9 +141,4 @@ Scene* TheScene_1 :: createScene()
     button_8->addTouchEventListener(CC_CALLBACK_1(TheScene_1::menubutton_8,this));
     layer->addChild(button_8,1);
     return scene;
-}
-
-void TheScene_1::updata(float dt)
-{
-    CCLOG("HELLO");
 }

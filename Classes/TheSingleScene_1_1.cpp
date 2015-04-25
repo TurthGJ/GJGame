@@ -114,7 +114,8 @@ Scene* TheSingleScene_1_1::createScene_1()
     button_1->addTouchEventListener(CC_CALLBACK_2(TheSingleScene_1_1::menubutton_1,this));
     layer->addChild(button_1,1);
     
-
+    CCLOG("%d\n",_image == NULL);
+    
     scene->schedule(schedule_selector(TheSingleScene_1_1::checkimage), 1.0f);
     
     return scene;
@@ -153,10 +154,11 @@ void TheSingleScene_1_1::menubutton_1(Ref *pSender,ui::Widget::TouchEventType ty
 
 void TheSingleScene_1_1::checkimage(float dt)
 {
-    if(_image)
-    {
-        CCLOG("%d\n",_image->plen);
-    }
+//    if(_image->plen > 0)
+//    {
+    CCLOG("%d\n",_image == NULL);
+    
+//    }
 
 //    if(_image->plen > 0)
 //    {

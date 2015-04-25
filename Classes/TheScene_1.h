@@ -20,6 +20,7 @@ USING_NS_CC;
 class TheScene_1 : public Layer
 {
 public:
+    TheScene_1();
     ~TheScene_1();
     Scene* createScene();
     void menubutton_1(Ref* pSender);
@@ -32,8 +33,6 @@ public:
     void menubutton_8(Ref* pSender);
     JsonImage* image;
     TheSingleScene_1* thescene_1;
-    
-    void updata(float dt);
 };
 
 #endif /* defined(__GJGame__TheScene_1__) */

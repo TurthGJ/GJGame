@@ -20,6 +20,8 @@
 		278D31CB1AD93956001A357F /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27630AAB1AD90F47009E8F8F /* MainScene.cpp */; };
 		27935E4F1AE0A83700E64251 /* input_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27935E4E1AE0A83700E64251 /* input_1.png */; };
 		27935E501AE0A83700E64251 /* input_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27935E4E1AE0A83700E64251 /* input_1.png */; };
+		27BC833E1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27BC833C1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp */; };
+		27BC833F1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27BC833C1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp */; };
 		27DADC911ADF5BC2003BD598 /* button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DADC901ADF5BC2003BD598 /* button_1.png */; };
 		27DADC921ADF5BC2003BD598 /* button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DADC901ADF5BC2003BD598 /* button_1.png */; };
 		27DADC941ADF5BCA003BD598 /* small_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DADC931ADF5BCA003BD598 /* small_button.png */; };
@@ -126,6 +128,8 @@
 		27630AAB1AD90F47009E8F8F /* MainScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
 		27630AAF1AD9119E009E8F8F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		27935E4E1AE0A83700E64251 /* input_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_1.png; sourceTree = "<group>"; };
+		27BC833C1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheSingleScene_1_2.cpp; sourceTree = "<group>"; };
+		27BC833D1AEB2BAD00F0DB6E /* TheSingleScene_1_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSingleScene_1_2.h; sourceTree = "<group>"; };
 		27DADC901ADF5BC2003BD598 /* button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_1.png; sourceTree = "<group>"; };
 		27DADC931ADF5BCA003BD598 /* small_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_button.png; sourceTree = "<group>"; };
 		27F50F5C1AE4E78B00771AF7 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
@@ -1101,6 +1105,8 @@
 				27594C3B1AE08FBB0085E5A5 /* CursorTextField.h */,
 				27F512941AE9E30000771AF7 /* TheSingleScene_1_1.cpp */,
 				27F512951AE9E30000771AF7 /* TheSingleScene_1_1.h */,
+				27BC833C1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp */,
+				27BC833D1AEB2BAD00F0DB6E /* TheSingleScene_1_2.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -1301,6 +1307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BC833E1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp in Sources */,
 				DA69C2951AE7CE3F0076EED6 /* MainScene.cpp in Sources */,
 				275EE4B81ADB41270053B773 /* TheScene_1.cpp in Sources */,
 				27F512961AE9E30000771AF7 /* TheSingleScene_1_1.cpp in Sources */,
@@ -1324,6 +1331,7 @@
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				275EE4B91ADB41270053B773 /* TheScene_1.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				27BC833F1AEB2BAD00F0DB6E /* TheSingleScene_1_2.cpp in Sources */,
 				27142D2C1ADE2D21007DA61A /* TheSingleScene_1.cpp in Sources */,
 				27F5A8CF1ADD53B2000B59DB /* JsonImage.cpp in Sources */,
 			);

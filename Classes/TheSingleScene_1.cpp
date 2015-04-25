@@ -28,7 +28,7 @@ TheSingleScene_1 :: TheSingleScene_1()
 
 TheSingleScene_1 :: ~TheSingleScene_1()
 {
-    
+
 }
 
 Scene* TheSingleScene_1 :: createScene_1()
@@ -81,7 +81,6 @@ Scene* TheSingleScene_1 :: createScene_1()
     button_2->setTitleFontSize(20);
     button_2->addTouchEventListener(CC_CALLBACK_2(TheSingleScene_1::menubutton_2,this));
     layer->addChild(button_2,1);
-
     
     return scene;
 }
@@ -104,9 +103,3 @@ void TheSingleScene_1::menubutton_2(Ref *pSender,ui::Widget::TouchEventType type
 {
 
 }
-
-
-
-
-
-
